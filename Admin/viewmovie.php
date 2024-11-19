@@ -39,7 +39,8 @@ else
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td scope="row"></td>
+                                        <td></td>
+                                        <td></td>
                                         <td></td>
                                         <td></td>
                                     </tr>
