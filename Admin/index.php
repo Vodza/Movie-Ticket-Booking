@@ -5,8 +5,8 @@ $error="";
 
 if(isset($_POST["btn_login"]))
 {
-   $email_id=$_POST["log_email"];
-   $paswrd_log=$_POST["log_psw"];
+    $email_id=$_POST["log_email"];
+    $paswrd_log=$_POST["log_psw"];
 
     if("admin@gmail.com"==$email_id)
     {
