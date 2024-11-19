@@ -20,7 +20,8 @@ else
                             <?php include('admin_sidenavbar.php'); ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="color:maroon;">Admin Dashboard</h5>
+                            <h5 class="text-center mt-2" style="color:maroon;">Danh sách phim</h5>
+                            <a href="addmovie.php">Thêm phim</a>
                         </div>
                     </div>
                 </div>
