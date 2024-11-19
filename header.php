@@ -69,7 +69,7 @@ if(isset($_POST["btn_reg"])) {
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Đặt Vé Xem Phim</title>
+    <title>Mephim</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">

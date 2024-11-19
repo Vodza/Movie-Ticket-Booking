@@ -123,7 +123,7 @@ function checkboxtotal() {
                 <form method="post" class="mt-5">
                     <div class="container" style="color:maroon;">
                         <center>
-                            <p>Vui lòng điền thông tin để đặt vé..</p>
+                            <p>Vui lòng điền thông tin để đặt vé</p>
                         </center>
                     <hr>
                         <label for="username"><b>Mã Khách Hàng</b></label>
