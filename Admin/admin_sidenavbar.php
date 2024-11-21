@@ -3,22 +3,22 @@
         <a class="nav-link" href="#" style="color:White;"> Movie Booking</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#" style="color:White;"> Cinema</a>
+        <a class="nav-link" href="viewcinema.php" style="color:White;"> Rạp</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#" style="color:White;"> Contact</a>
+        <a class="nav-link" href="viewcontact.php" style="color:White;"> Liên Hệ</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#" style="color:White;">Customer</a>
+        <a class="nav-link" href="viewcustomer.php" style="color:White;">Khách Hàng</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#" style="color:White;"> Movie Genre</a>
+        <a class="nav-link" href="viewgenre.php" style="color:White;"> Thể Loại</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#" style="color:White;"> Movie Industry</a>
+        <a class="nav-link" href="viewindustry.php" style="color:White;"> Quốc Gia</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#" style="color:White;"> Movie Language</a>
+        <a class="nav-link" href="viewlanguage.php" style="color:White;"> Ngôn Ngữ</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="viewmovie.php" style="color:White;"> Phim</a>
@@ -36,6 +36,9 @@
         <a class="nav-link" href="#" style="color:White;"> Movie Show Time</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#" style="color:White;"> Slider</a>
+        <a class="nav-link" href="viewslider.php" style="color:White;"> Slider</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="viewhotmovie.php" style="color:White;"> Phim Hot</a>
     </li>
 </ul>

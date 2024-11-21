@@ -120,7 +120,7 @@ if(isset($_POST["btn_login"]))
                         <center>
                             <h1> Admin Login</h1>
                         </center>
-                     <hr>
+                    <hr>
                         <label for="email"><b>Email</b></label>
                         <input type="text" style="border-radius:30px;" placeholder="Enter Email" name="log_email" id="email" required>
 

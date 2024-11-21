@@ -12,7 +12,6 @@ class connec
 
     function __construct()
     {
-        // Truy cập các thuộc tính đúng cách bằng $this-> mà không cần gán lại
         $this->conn = new mysqli($this->server_name, $this->username, $this->password, $this->db_name);
         
         if ($this->conn->connect_error)
@@ -27,6 +26,12 @@ class connec
     {
         $sql = "SELECT * FROM $table_name";
         $result = $this->conn->query($sql);
+        return $result;
+    }
+
+    function select_by_query($query)
+    {
+        $result = $this->conn->query($query);
         return $result;
     }
 

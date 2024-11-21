@@ -12,8 +12,8 @@ else
     include("admin_header.php");
 
     $con = new connec();
-    $sql = "SELECT movie.id, movie.name, movie.movie_banner, movie.rel_date, industry.industry_name, genre.genre_name, language.lang_name, movie.duration FROM movie, genre, industry, movie_ticket_booking.language WHERE movie.industry_id=industry.id AND movie.genre_id=genre.id AND movie.lang_id=language.id;";
-    $result = $con->select_by_query($sql);
+    $tbl = "hot_movies";
+    $result = $con->select_all($tbl);
     ?>
 
             
@@ -24,19 +24,14 @@ else
                             <?php include('admin_sidenavbar.php'); ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="color:maroon;">Danh sách phim</h5>
-                            <a href="addmovie.php">Thêm phim</a>
-
+                            <h5 class="text-center mt-2" style="color:maroon;">Danh sách phim hot</h5>
+                            <a href="addhotmovie.php">Thêm phim hot</a>
                             <table class="table mt-5" border="1">
                                 <thead style="background-color:maroon;color:white;">
                                     <tr>
-                                        <th>Banner</th>
+                                        <th>Ảnh</th>
                                         <th>Tên</th>
-                                        <th>Ngày ra mắt</th>
-                                        <th>Quốc gia</th>
-                                        <th>Thể loại</th>
-                                        <th>Ngôn ngữ</th>
-                                        <th>Thời gian phim</th>
+                                        <th>Ngày Phát Hành</th>
                                         <th>Nút</th>
                                     </tr>
                                 </thead>
@@ -48,16 +43,12 @@ else
                                             {
                                                 ?>
                                                 <tr>
-                                                    <td><img src="../<?php echo $row["movie_banner"]; ?>" style="height:200px;"></td>
-                                                    <td><?php echo $row["name"]; ?></td>
-                                                    <td><?php echo $row["rel_date"]; ?></td>
-                                                    <td><?php echo $row["industry_name"]; ?></td>
-                                                    <td><?php echo $row["genre_name"]; ?></td>
-                                                    <td><?php echo $row["lang_name"]; ?></td>
-                                                    <td><?php echo $row["duration"]; ?></td>
+                                                    <td><img src="../<?php echo $row["img_path"]; ?>" style="height:200px;"></td>
+                                                    <td><?php echo $row["title"]; ?></td>
+                                                    <td><?php echo $row["release_date"]; ?></td>
                                                     <td>
-                                                        <a href="editmovie.php?id=<?php echo $row["id"]; ?>" class="btn btn-primary">Chỉnh</a>
-                                                        <a href="deletemovie.php?id=<?php echo $row["id"]; ?>" class="btn btn-danger">Xóa</a>
+                                                        <a href="edithotmovie.php?id=<?php echo $row["id"]; ?>" class="btn btn-primary">Chỉnh</a>
+                                                        <a href="deletehotmovie.php?id=<?php echo $row["id"]; ?>" class="btn btn-danger">Xóa</a>
                                                     </td>
                                                 </tr>
                                                 <?php
