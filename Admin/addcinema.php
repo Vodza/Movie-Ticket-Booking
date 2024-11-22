@@ -49,7 +49,8 @@ else
                                                     <label for="email"><b>Thành Phố</b></label>
                                                     <input type="text" style="border-radius:30px;" placeholder="Nhập thành phố" name="city_name_txt" Required>
 
-                                                    <button type="submit" name="btn_insert" class="btn" style="background-color:maroon; color:white">Thêm</button>
+                                                    <button type="submit" name="btn_insert" class="btn btn-success">Thêm</button>
+                                                    <a href="viewcinema.php" class="btn btn-secondary">Hủy</a>
                                             </div>
                                         </form>
                                     </div>

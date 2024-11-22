@@ -65,7 +65,7 @@ else
                                                     <input type="text" style="border-radius:30px;" placeholder="Nhập thành phố" name="city_name_txt" value="<?php echo $c; ?>" Required>
 
                                                     <button type="submit" name="btn_delete" class="btn" style="background-color:maroon; color:white">Xóa</button>
-                                                    <a href="viewcinema.php" class="btn" style="background-color:maroon; color:white">Hủy</a>
+                                                    <a href="viewcinema.php" class="btn btn-secondary">Hủy</a>
                                             </div>
                                         </form>
                                     </div>

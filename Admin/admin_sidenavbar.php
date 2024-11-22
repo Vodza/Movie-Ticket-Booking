@@ -24,10 +24,10 @@
         <a class="nav-link" href="viewmovie.php" style="color:White;"> Phim</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#" style="color:White;"> Seat Details</a>
+        <a class="nav-link" href="viewseat_details.php" style="color:White;"> Chi Tiết Ghế</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#" style="color:White;"> Seat Reserved</a>
+        <a class="nav-link" href="#" style="color:White;"> Ghế Đã Đặt</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="#" style="color:White;"> Movie Show</a>

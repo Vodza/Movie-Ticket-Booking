@@ -12,9 +12,15 @@ else
     include("admin_header.php");
 
     $con = new connec();
-    $tbl = "hot_movies";
-    $result = $con->select_all($tbl);
-?>
+    $sql = "SELECT seat_detail.id, customer.fullname,seat_detail.seat_no, movie_ticket_booking.show.id AS 'show_id', movie.name
+    FROM
+    seat_detail, customer, movie, movie_ticket_booking.show
+    WHERE
+    seat_detail.cust_id = customer.id AND
+    seat_detail.show_id= movie_ticket_booking.show.id AND
+    movie.id=movie_ticket_booking.show.movie_id;";
+    $result = $con->select_by_query($sql);
+    ?>
 
             
             <section>
@@ -24,15 +30,16 @@ else
                             <?php include('admin_sidenavbar.php'); ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="color:maroon;">Danh sách phim hot</h5>
-                            <a href="addhotmovie.php">Thêm phim hot</a>
+                            <h5 class="text-center mt-2" style="color:maroon;">Chi Tiết Ghế/h5>
+                            <a href="addseat_detail.php">Đặt Ghế</a>
+
                             <table class="table mt-5" border="1">
                                 <thead style="background-color:maroon;color:white;">
                                     <tr>
-                                        <th>Ảnh</th>
-                                        <th>Tên</th>
-                                        <th>Ngày Phát Hành</th>
-                                        <th>Nút</th>
+                                        <th>ID</th>
+                                        <th>Tên Khách Hàng</th>
+                                        <th>Số Ghế</th>
+                                        <th>Tên Phim</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -43,13 +50,10 @@ else
                                             {
                                                 ?>
                                                 <tr>
-                                                    <td><img src="../<?php echo $row["img_path"]; ?>" style="height:200px;"></td>
-                                                    <td><?php echo $row["title"]; ?></td>
-                                                    <td><?php echo $row["release_date"]; ?></td>
-                                                    <td>
-                                                        <a href="edithotmovie.php?id=<?php echo $row["id"]; ?>" class="btn btn-primary">Chỉnh</a>
-                                                        <a href="deletehotmovie.php?id=<?php echo $row["id"]; ?>" class="btn btn-danger">Xóa</a>
-                                                    </td>
+                                                    <td><?php echo $row["id"]; ?></td>
+                                                    <td><?php echo $row["fullname"]; ?></td>
+                                                    <td><?php echo $row["seat_no"]; ?></td>
+                                                    <td><?php echo $row["name"]; ?></td>
                                                 </tr>
                                                 <?php
                                             }

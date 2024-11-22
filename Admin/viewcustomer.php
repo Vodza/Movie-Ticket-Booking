@@ -25,7 +25,6 @@ else
                         </div>
                         <div class="col-md-10">
                             <h5 class="text-center mt-2" style="color:maroon;">Khách Hàng</h5>
-                            <a href="addcustomer.php">Thêm khách hàng</a>
 
                             <table class="table mt-5" border="1">
                                 <thead style="background-color:maroon;color:white;">
@@ -54,7 +53,6 @@ else
                                                     <td><?php echo $row["gender"]; ?></td>
                                                     <td><?php echo $row["password"]; ?></td>
                                                     <td>
-                                                        <a href="editcustomer.php?id=<?php echo $row["id"]; ?>" class="btn btn-primary">Chỉnh</a>
                                                         <a href="deletecustomer.php?id=<?php echo $row["id"]; ?>" class="btn btn-danger">Xóa</a>
                                                     </td>
                                                 </tr>

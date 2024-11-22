@@ -61,8 +61,8 @@ else
                                                     <label><b>Văn Bản Thay Thế</b></label>
                                                     <input type="text" style="border-radius:30px;" placeholder="Nhập văn bản thay thế" name="slider_alt_txt" Required>
 
-                                                    <button type="submit" name="btn_insert" class="btn" style="background-color:maroon; color:white">Thêm</button>
-                                            </div>
+                                                    <button type="submit" name="btn_insert" class="btn btn-success">Thêm</button>
+                                                    <a href="viewslider.php" class="btn btn-secondary">Hủy</a>
                                         </form>
                                     </div>
                                 </div>

@@ -67,7 +67,8 @@ else
                                                     <label for="email"><b>Thành Phố</b></label>
                                                     <input type="text" style="border-radius:30px;" placeholder="Nhập thành phố" name="city_name_txt" value="<?php echo $c; ?>" Required>
 
-                                                    <button type="submit" name="btn_update" class="btn" style="background-color:maroon; color:white">Cập Nhật</button>
+                                                    <button type="submit" name="btn_update" class="btn btn-primary">Cập Nhật</button>
+                                                    <a href="viewcinema.php" class="btn btn-secondary">Hủy</a>
                                             </div>
                                         </form>
                                     </div>
