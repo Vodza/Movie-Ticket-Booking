@@ -86,6 +86,32 @@ class connec
         }
     }
 
+    function update($query,$msg)
+    {
+        if($this->conn->query($query)===TRUE)
+        {
+            echo '<script> alert("'.$msg.'");</script>' ;
+        }
+        else
+        {
+            echo '<script> alert("'.$this->conn->error.'");</script>' ;
+        }
+    }
+
+    function delete($table_name, $id)
+    {
+        $query="Delete from $table_name WHERE id=$id";
+        if($this->conn->query($query)===TRUE)
+        {
+            echo '<script> alert("Đã Xóa Thành Công");</script>' ;
+        }
+        else
+        {
+            echo '<script> alert("'.$this->conn->error.'");</script>' ;
+        }
+    }
+
+
 
     function insert_lastid($query)
     {

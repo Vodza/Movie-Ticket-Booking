@@ -58,8 +58,11 @@ if(isset($_POST["btn_reg"])) {
         // Cập nhật câu truy vấn với mật khẩu đã mã hóa
         $sql = "INSERT INTO customer VALUES (0, '$name', '$email', '$cellno', '$gender', '$hashed_password')";
         $con->insert($sql, "Đăng kí thành công");
-    } else {
-        echo '<script>alert("Mật khẩu không trùng khớp");</script>';
+    } else
+    {
+        ?>
+        <script>alert("Mật khẩu không trùng khớp");</script>;
+        <?php
     }
 }
 ?>
