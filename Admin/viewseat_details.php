@@ -30,15 +30,14 @@ else
                             <?php include('admin_sidenavbar.php'); ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="color:maroon;">Chi Tiết Ghế/h5>
-                            <a href="addseat_detail.php">Đặt Ghế</a>
+                            <h5 class="text-center mt-2" style="color:maroon;">Chi Tiết Ghế</h5>
 
                             <table class="table mt-5" border="1">
                                 <thead style="background-color:maroon;color:white;">
                                     <tr>
                                         <th>ID</th>
                                         <th>Tên Khách Hàng</th>
-                                        <th>Số Ghế</th>
+                                        <th>Số Ghế Đã Đặt</th>
                                         <th>Tên Phim</th>
                                     </tr>
                                 </thead>

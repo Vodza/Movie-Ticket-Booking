@@ -27,7 +27,7 @@
         <a class="nav-link" href="viewseat_details.php" style="color:White;"> Chi Tiết Ghế</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#" style="color:White;"> Ghế Đã Đặt</a>
+        <a class="nav-link" href="viewseat_reserved.php" style="color:White;"> Ghế Đã Đặt</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="#" style="color:White;"> Movie Show</a>
