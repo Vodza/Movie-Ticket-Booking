@@ -144,12 +144,13 @@ if (empty($_SESSION["username"])) {
         // Lấy dữ liệu từ bảng hot_movies
         $hot_movies = $con->select_all("hot_movies");
         
+
         if ($hot_movies->num_rows > 0) {
             while ($movie = $hot_movies->fetch_assoc()) {
                 ?>
                 <div class="col-md-3">
                     <div class="movie-card">
-                    <a href="detail.php?id=<?php echo htmlspecialchars($row['id']); ?>">
+                    <a href="detail.php?id=<?php echo htmlspecialchars($movie['id']); ?>">
                             <img src="<?php echo $movie['img_path']; ?>" alt="<?php echo $movie['title']; ?>">
                         </a>
                         <p><?php echo $movie["title"]; ?></p>
