@@ -34,7 +34,7 @@
                     <li style="display: inline; margin-right: 15px;"><a href="#" style="color:grey;">Twitter</a></li>
                     <li style="display: inline;"><a href="#" style="color:darkgrey;">Instagram</a></li>
                 </ul>
-                <p class="mt-3" style="font-size: 14px;">&copy; 2024 Mephim. Bảo lưu mọi quyền.</p>
+                <p class="mt-3" style="font-size: 14px;">&copy; 2024 Công Ty Phim. Bảo lưu mọi quyền.</p>
             </div>
         </div>
     </div>

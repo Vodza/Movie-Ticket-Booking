@@ -95,7 +95,7 @@ function checkboxtotal() {
                 <div id="seat-map" id="seatCharts">
                 <h3 class="text-center mt-5"  style="color:maroon;">Chọn Chỗ Ngồi</h3>
                     <hr>
-                    <label class="text-center" style="width:100%;background-color:maroon;color:white;padding:2%"> 
+                    <label class="text-center" style="width:100%;background-color:maroon;color:white;padding:2%; margin-left: -15px"> 
                         MÀN HÌNH
                     </label>
 

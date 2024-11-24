@@ -149,9 +149,11 @@ if (empty($_SESSION["username"])) {
                 ?>
                 <div class="col-md-3">
                     <div class="movie-card">
-                        <img src="<?php echo $movie["img_path"]; ?>" alt="<?php echo $movie["title"]; ?>">
+                    <a href="detail.php?id=<?php echo htmlspecialchars($row['id']); ?>">
+                            <img src="<?php echo $movie['img_path']; ?>" alt="<?php echo $movie['title']; ?>">
+                        </a>
                         <p><?php echo $movie["title"]; ?></p>
-                        <a href="booking.php?movie_id=<?php echo $movie['id']; ?>" class="btn-book">Xem chi tiết</a>
+                        <a href="booking.php?movie_id=<?php echo $movie['id']; ?>" class="btn-book">Đặt vé ngay</a>
                     </div>
                 </div>
                 <?php

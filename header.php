@@ -15,7 +15,7 @@ if(isset($_GET["action"]))
 } 
 
 if(empty($_SESSION["username"])) {
-    $_SESSION["ul"] = '<li class="nav-item"><a class="nav-link" data-toggle="modal" data-target="#modelId" style="color: black;">Đăng Kí</a></li><li class="nav-item"><a class="nav-link" data-toggle="modal" data-target="#modelId1" style="color: black;">Đăng Nhập</a></li>';
+    $_SESSION["ul"] = '<li class="nav-item"><a class="nav-link" data-toggle="modal" data-target="#modelId">Đăng Kí</a></li><li class="nav-item"><a class="nav-link" data-toggle="modal" data-target="#modelId1">Đăng Nhập</a></li>';
 }
 
 if(isset($_POST["btn_login"])) {
@@ -147,6 +147,21 @@ if(isset($_POST["btn_reg"])) {
     body {
         background-color: #fdfcf0; /* Đặt màu nền */
     }
+
+    .nav-link {
+        text-decoration: none; /* Bỏ gạch chân */
+        padding: 10px 15px; /* Thêm khoảng cách cho liên kết */
+        border-radius: 5px; /* Bo góc */
+        transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển tiếp */
+    }   
+
+    .nav-link:hover {
+        background-color: #FFFFCC; /* Màu nền khi hover */
+        color: whitesmoke; /* Màu chữ khi hover */
+        cursor: pointer; /* Đảm bảo con trỏ chuột là pointer */
+
+    }
+
 </style>
 
 </head>

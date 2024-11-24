@@ -35,6 +35,7 @@ else
                                         <th>SDT</th>
                                         <th>Tin nhắn</th>
                                         <th>Ngày gửi</th>
+                                        <th>Nút</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -51,6 +52,10 @@ else
                                                     <td><?php echo $row["num"]; ?></td>
                                                     <td><?php echo $row["msg"]; ?></td>
                                                     <td><?php echo $row["msg_date"]; ?></td>
+                                                    <td>
+                                                        <a href="editcontact.php?id=<?php echo $row["id"]; ?>" class="btn btn-primary">Chỉnh</a>
+                                                        <a href="deletecontact.php?id=<?php echo $row["id"]; ?>" class="btn btn-danger">Xóa</a>
+                                                    </td>
                                                 </tr>
                                                 <?php
                                             }
