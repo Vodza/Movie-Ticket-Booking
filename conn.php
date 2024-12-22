@@ -22,10 +22,15 @@ class connec
 
     
 
-    function select_all($table_name)
-    {
-        $sql = "SELECT * FROM $table_name";
+    function select_all($table) {
+        // Dùng dấu backtick để xử lý bảng có tên trùng với từ khóa
+        $sql = "SELECT * FROM `$table`";
         $result = $this->conn->query($sql);
+    
+        if (!$result) {
+            die("Query failed: " . $this->conn->error);
+        }
+    
         return $result;
     }
 

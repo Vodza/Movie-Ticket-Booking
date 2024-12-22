@@ -30,7 +30,7 @@ else
                             <?php include('admin_sidenavbar.php'); ?>
                         </div>
                         <div class="col-md-10">
-                            <h5 class="text-center mt-2" style="color:maroon;">Chi Tiết Ghế/h5>
+                            <h5 class="text-center mt-2" style="color:maroon;">Chi Tiết Ghế</h5>
                             <a href="addseat_detail.php">Đặt Ghế</a>
 
                             <table class="table mt-5" border="1">

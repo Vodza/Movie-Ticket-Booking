@@ -1,7 +1,7 @@
 <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-5" >
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link" href="#" style="color:White;"> Movie Booking</a>
-    </li>
+    </li> -->
     <li class="nav-item">
         <a class="nav-link" href="viewcinema.php" style="color:White;"> Rạp</a>
     </li>
@@ -29,11 +29,11 @@
     <li class="nav-item">
         <a class="nav-link" href="#" style="color:White;"> Ghế Đã Đặt</a>
     </li>
+    <!-- <li class="nav-item">
+        <a class="nav-link" href="viewshow.php" style="color:White;"> Movie Show</a>
+    </li> -->
     <li class="nav-item">
-        <a class="nav-link" href="#" style="color:White;"> Movie Show</a>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#" style="color:White;"> Movie Show Time</a>
+        <a class="nav-link" href="viewtime.php" style="color:White;"> Movie Show Time</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="viewslider.php" style="color:White;"> Slider</a>

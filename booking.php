@@ -102,10 +102,11 @@ if (isset($_POST["btn_booking"])) {
                         <input type="hidden" name="show_id" id="hidden_show_id"> <!-- Lưu ID show -->
 
                         <label for="psw"><b>Số Vé</b></label>
-                        <input type="number" style="border-radius:30px;" id="no_ticket" name="no_ticket" required disabled>
+                        <input type="number" style="border-radius:30px;" id="no_ticket" name="no_ticket" required  readonly>
 
                         <label for="psw-repeat"><b>Ghế Ngồi</b></label>
-                        <input type="text" style="border-radius:30px;" name="seat_dt" id="seat_dt" required disabled>
+                        <input type="text" style="border-radius:30px;" name="seat_dt" id="seat_dt" required  readonly>
+
 
                         <button type="submit" name="btn_booking" class="btn" style="background-color:maroon;color:white;">Xác nhận đặt vé</button>
                         <hr>
@@ -162,6 +163,7 @@ function checkboxtotal() {
     $('#seat_dt').val(seat.join(", "));
 }
 </script>
+
 
 
 <?php

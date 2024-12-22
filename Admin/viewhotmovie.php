@@ -31,7 +31,6 @@ else
                                     <tr>
                                         <th>Ảnh</th>
                                         <th>Tên</th>
-                                        <th>Ngày Phát Hành</th>
                                         <th>Nút</th>
                                     </tr>
                                 </thead>
@@ -45,7 +44,6 @@ else
                                                 <tr>
                                                     <td><img src="../<?php echo $row["img_path"]; ?>" style="height:200px;"></td>
                                                     <td><?php echo $row["title"]; ?></td>
-                                                    <td><?php echo $row["release_date"]; ?></td>
                                                     <td>
                                                         <a href="edithotmovie.php?id=<?php echo $row["id"]; ?>" class="btn btn-primary">Chỉnh</a>
                                                         <a href="deletehotmovie.php?id=<?php echo $row["id"]; ?>" class="btn btn-danger">Xóa</a>
