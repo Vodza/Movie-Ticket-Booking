@@ -11,6 +11,8 @@ $config = [
 $embeddata = json_encode(['redirecturl' => 'http://localhost:84/GitHub/']); // Merchant's data
 $items = '[]'; // Merchant's data
 $transID = rand(0,1000000); //Random trans id
+
+
 $order = [
     "app_id" => $config["app_id"],
     "app_time" => round(microtime(true) * 1000), // miliseconds

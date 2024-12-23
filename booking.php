@@ -81,16 +81,18 @@ if (isset($_POST["btn_booking"])) {
                     </form>
                 </div>
                 
-                <div id="bookingSection" style="display:none;">
-                    <h6 class="mt-5" style="color:maroon;">Giá Vé</h6>
-                    <p class="mt-1">70,000 VND</p>
+                <form action="payment.php" method="post">
+                    <div id="bookingSection" style="display:none;">
+                        <h6 class="mt-5" style="color:maroon;">Giá Vé</h6>
+                        <p class="mt-1">70,000 VND</p>
 
-                    <h6 class="mt-3" style="color:maroon;">Tổng Giá Vé</h6>
-                    <p class="mt-1" id="price_details"></p>
-                </div>
+                        <h6 class="mt-3" style="color:maroon;">Tổng Giá Vé</h6>
+                        <p class="mt-1" id="price_details"></p>
+                    </div>
             </div>
+                </form>
             <div class="col-md-5">
-                <form method="post" class="mt-5">
+                <form method="post" action="payment.php" class="mt-5">
                     <div class="container" style="color:maroon;">
                         <center>
                             <p>Vui lòng điền thông tin để đặt vé</p>
