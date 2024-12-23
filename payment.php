@@ -8,7 +8,7 @@ $config = [
     "endpoint" => "https://sb-openapi.zalopay.vn/v2/create"
 ];
 
-$embeddata = json_encode(['redirecturl' => 'http://localhost:84/GitHub/']); // Merchant's data
+$embeddata = json_encode(['redirecturl' => 'http://localhost/Online_Movie_Ticket_Booking/']); // Merchant's data
 $items = '[]'; // Merchant's data
 $transID = rand(0,1000000); //Random trans id
 
@@ -23,7 +23,7 @@ $order = [
     "amount" => 140000,
     "description" => "Lazada - Payment for the order #$transID",
     "bank_code" => "",
-    "callback_url"  => "localhost:84/GitHub/callback.php",
+    "callback_url"  => "localhost/Online_Movie_Ticket_Booking/callback.php",
 ];
 
 // appid|app_trans_id|appuser|amount|apptime|embeddata|item

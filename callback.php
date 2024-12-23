@@ -23,7 +23,7 @@ try {
     $datajson = json_decode($postdatajson["data"], true);
     // echo "update order's status = success where app_trans_id = ". $dataJson["app_trans_id"];
 
-    error_log("thanh toán thành công", 3, 'C:\xampp\htdocs\GitHub\logfile.log');
+    error_log("thanh toán thành công", 3, 'C:\Users\win\Kì 1 năm 2\Web_2\Online_Movie_Ticket_Booking\logfile.log');
 
     $result["return_code"] = 1;
     $result["return_message"] = "success";

@@ -12,7 +12,7 @@ else
     include("admin_header.php");
 
     $con = new connec();
-    $sql = "SELECT movie.id, movie.name, movie.movie_banner, movie.rel_date, industry.industry_name, genre.genre_name, language.lang_name, movie.duration FROM movie, genre, industry, movie_ticket_booking.language WHERE movie.industry_id=industry.id AND movie.genre_id=genre.id AND movie.lang_id=language.id;";
+    $sql = "SELECT movie.id, movie.name, movie.movie_banner, movie.movie_desc, movie.rel_date, industry.industry_name, genre.genre_name, language.lang_name, movie.duration FROM movie, genre, industry, movie_ticket_booking.language WHERE movie.industry_id=industry.id AND movie.genre_id=genre.id AND movie.lang_id=language.id;";
     $result = $con->select_by_query($sql);
     ?>
 
@@ -36,6 +36,7 @@ else
                                         <th>Quốc gia</th>
                                         <th>Thể loại</th>
                                         <th>Ngôn ngữ</th>
+                                        <th>Mô tả</th>
                                         <th>Thời gian phim</th>
                                         <th>Nút</th>
                                     </tr>
@@ -54,6 +55,7 @@ else
                                                     <td><?php echo $row["industry_name"]; ?></td>
                                                     <td><?php echo $row["genre_name"]; ?></td>
                                                     <td><?php echo $row["lang_name"]; ?></td>
+                                                    <td><?php echo $row["movie_desc"]; ?></td>
                                                     <td><?php echo $row["duration"]; ?></td>
                                                     <td>
                                                         <a href="editmovie.php?id=<?php echo $row["id"]; ?>" class="btn btn-primary">Chỉnh</a>
