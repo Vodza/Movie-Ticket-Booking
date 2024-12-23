@@ -282,7 +282,6 @@ if(isset($_POST["btn_reg"])) {
                             <h1>Đăng Nhập</h1>
                         </center>
                         <hr>
-
                             <label for="email"><b>Email</b></label>
                             <input type="text" style="border-radius:30px;" placeholder="Nhập email" name="log_email" id="email" Required>
 
@@ -290,6 +289,7 @@ if(isset($_POST["btn_reg"])) {
                             <input type="password" style="border-radius:30px;" placeholder="Nhập mật khẩu" name="log_psw" id="log_psw" Required>
 
                             <button type="submit" name="btn_login" class="btn" style="background-color:maroon; color:white">Đăng Nhập</button>
+                            <a href="forgot-password.php">Forgot password?</a>
                     </div>
                 </form>
             </div>
