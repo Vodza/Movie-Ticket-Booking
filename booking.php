@@ -83,12 +83,13 @@ if (isset($_POST["btn_booking"])) {
                 </div>
                 
                 <form action="payment.php" method="post">
-                    <div id="bookingSection" style="display:none;">
+                <div id="bookingSection" style="display:none;">
                         <h6 class="mt-5" style="color:maroon;">Giá Vé</h6>
                         <p class="mt-1">70,000 VND</p>
 
                         <h6 class="mt-3" style="color:maroon;">Tổng Giá Vé</h6>
                         <p class="mt-1" id="price_details"></p>
+                        
                     </div>
             </div>
                 </form>
@@ -109,6 +110,7 @@ if (isset($_POST["btn_booking"])) {
 
                         <label for="psw-repeat"><b>Ghế Ngồi</b></label>
                         <input type="text" style="border-radius:30px;" name="seat_dt" id="seat_dt" required  readonly>
+                        <input type="hidden" id="price_details_input" name="price_details" required>
 
 
                         <button type="submit" name="btn_booking" class="btn" style="background-color:maroon;color:white;">Xác nhận đặt vé</button>
@@ -159,12 +161,19 @@ function checkboxtotal() {
     });
 
     var st = seat.length;
+    var total = st * 70000;
     document.getElementById('no_ticket').value = st;
-    var total = (st * 70000).toLocaleString('vi-VN') + " VND";
+    
+    var totalFormatted = total.toLocaleString('vi-VN') + " VND";
     $('#price_details').text(total);
 
     $('#seat_dt').val(seat.join(", "));
-}
+
+    //lưu giá trị vào session
+    document.getElementById('price_details_input').value = total;    
+    }
+
+
 </script>
 
 

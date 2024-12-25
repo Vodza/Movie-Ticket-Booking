@@ -1,5 +1,6 @@
 <?php
 // PHP Version 7.3.3
+session_start();
 
 $config = [
     "app_id" => 2553,
@@ -8,11 +9,14 @@ $config = [
     "endpoint" => "https://sb-openapi.zalopay.vn/v2/create"
 ];
 
+$amount = isset($_POST['price_details']) ? intval($_POST['price_details']) : 0;
+
+echo $amount;
+
 $embeddata = json_encode(['redirecturl' => 'http://localhost/Online_Movie_Ticket_Booking/']); // Merchant's data
 $items = '[]'; // Merchant's data
 $transID = rand(0,1000000); //Random trans id
-
-
+$price_details = isset($_POST['price_details']) ? intval($_POST['price_details']) : 0;
 $order = [
     "app_id" => $config["app_id"],
     "app_time" => round(microtime(true) * 1000), // miliseconds
@@ -20,7 +24,7 @@ $order = [
     "app_user" => "user123",
     "item" => $items,
     "embed_data" => $embeddata,
-    "amount" => 140000,
+    "amount" => $amount,
     "description" => "Lazada - Payment for the order #$transID",
     "bank_code" => "",
     "callback_url"  => "localhost/Online_Movie_Ticket_Booking/callback.php",
