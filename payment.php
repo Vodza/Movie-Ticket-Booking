@@ -1,6 +1,8 @@
 <?php
-// PHP Version 7.3.3
+
+
 session_start();
+include("conn.php"); // Bao gồm tệp định nghĩa lớp connec
 
 $config = [
     "app_id" => 2553,
@@ -47,6 +49,29 @@ $resp = file_get_contents($config["endpoint"], false, $context);
 $result = json_decode($resp, true);
 
 if($result["return_code"] == 1) {
+    // Kết nối cơ sở dữ liệu
+    $connect = new connec();
+
+    $cust_id = $_POST["cust_id"];
+    $show_id = $_POST["show_id"];
+    $no_tikt = $_POST["no_ticket"];
+    $total_amnt = (70000 * $no_tikt);
+
+    $seat_number = $_POST["seat_dt"];
+    $seat_arr = explode(", ", $seat_number);
+
+    foreach ($seat_arr as $item) {
+        $sql = "INSERT INTO seat_reserved VALUES(0, $show_id, $cust_id, '$item', 'true')";
+        $abc = $connect->insert_lastid($sql);
+    }
+
+    $sql = "INSERT INTO seat_detail VALUES(0, $cust_id, $show_id, $no_tikt)";
+    $seat_dt_id = $connect->insert_lastid($sql);
+
+    $sql = "INSERT INTO booking VALUES(0, $cust_id, $show_id, $no_tikt, $seat_dt_id, NOW(), $total_amnt)";
+    $connect->insert($sql, "Đặt vé thành công");
+
+    // Chuyển hướng đến URL đơn hàng
     header("Location: " . $result["order_url"]);
     exit;
 }
@@ -54,4 +79,4 @@ if($result["return_code"] == 1) {
 foreach ($result as $key => $value) {
     echo "$key: $value<br>";
 }
-
+?>

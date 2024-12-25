@@ -169,7 +169,7 @@ function checkboxtotal() {
 
     $('#seat_dt').val(seat.join(", "));
 
-    //lưu giá trị vào session
+    //lưu giá trị vào hàm ẩn
     document.getElementById('price_details_input').value = total;    
     }
 
